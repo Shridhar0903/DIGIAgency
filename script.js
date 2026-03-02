@@ -143,3 +143,27 @@ prevBtn.addEventListener("click", () => {
 });
 
 window.addEventListener("resize", updateSlide);
+
+//===========================================================================
+const dropdown = document.querySelector(".dropdown");
+const dropdownIcon = document.querySelector(".dropdown-icon");
+
+// Only toggle when clicking icon
+dropdownIcon.addEventListener("click", function (e) {
+  e.stopPropagation();
+  dropdown.classList.toggle("active");
+});
+
+// Close when clicking outside
+document.addEventListener("click", function (e) {
+  if (!dropdown.contains(e.target)) {
+    dropdown.classList.remove("active");
+  }
+});
+
+// Close when clicking outside
+document.addEventListener("click", function (e) {
+  if (!dropdown.contains(e.target)) {
+    dropdown.classList.remove("active");
+  }
+});
